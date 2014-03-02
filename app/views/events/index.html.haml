@@ -1,0 +1,10 @@
+-if @events.count > 0
+    %ul
+        -@events.each do |event|
+            %li= event.id
+            %li= event.date
+            %li= event.duration
+-else
+    No events registered yet,
+    =succeed "!" do
+        =link_to "register an event now", new_event_path
