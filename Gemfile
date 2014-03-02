@@ -6,7 +6,7 @@ gem 'rails', '4.0.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-gem 'haml'
+gem 'haml-rails'
 gem 'simple_form'
 
 # Use SCSS for stylesheets
