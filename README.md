@@ -1,28 +1,16 @@
-== README
+Workshop Preparation
+====================
+For this workshop, we will work with a simple Ruby on Rails app. Please prepare
+the following environment on your machine prior to attending the workshop.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*   Install RVM, Ruby 2.0.0-p451, and rails 4.0.3
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    Please follow these
+    [installation instructions for Mac OSX](http://railsapps.github.io/installrubyonrails-mac.html)
+    or
+    [installation instructions for Ubuntu](http://railsapps.github.io/installrubyonrails-ubuntu.html).
+    Windows users please [see below][win-install].
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+    $ rvm install ruby-2.0.0-p451
+    $ gem install rails --version='4.0.3'
