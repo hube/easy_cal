@@ -7,7 +7,7 @@ gem 'rails', '4.0.3'
 gem 'pg'
 
 gem 'haml-rails'
-gem 'simple_form'
+gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git', branch: 'rm-bootstrap-3-generator'
 gem 'high_voltage'
 
 # Use SCSS for stylesheets
