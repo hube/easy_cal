@@ -1,4 +1,6 @@
-=simple_form_for @event do |f|
-    =f.input :date
-    =f.input :duration
-    =f.button :submit
+.row
+    .col-md-4.col-md-offset-4
+        %p.lead Add a New Event
+        =simple_form_for @event, { class: 'form-horizontal' } do |f|
+            =f.input :date, label: 'Initial Date'
+            =f.button :submit
