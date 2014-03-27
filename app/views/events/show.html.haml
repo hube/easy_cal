@@ -1,11 +1,6 @@
-%table.table.table-bordered
-  %thead
-    %tr
-      %th Event ID
-      %th Event Date
-      %th Description
-  %tbody
-    %tr
-      %td= @event.id
-      %td= @event.date
-      %td
+%h1 Event ID #{@event.id}
+%p.lead
+  (Event description)
+%p
+  Event date:
+  =@event.date
