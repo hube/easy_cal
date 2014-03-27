@@ -1,9 +1,19 @@
 -if @events.count > 0
-    %ul
-        -@events.each do |event|
-            %li= event.id
-            %li= event.date
+    %table.table.table-bordered
+        %thead
+            %tr
+                %th Event ID
+                %th Event Date
+                %th
+        %tbody
+            -@events.each do |event|
+                %tr
+                    %td= event.id
+                    %td= event.date
+                    %td
+                        %a.btn{ href: '#' } Join
 -else
-    No events registered yet,
-    =succeed "!" do
-        =link_to "register an event now", new_event_path
+    %p.lead
+        No events registered yet,
+        =succeed "!" do
+            =link_to "register an event now", new_event_path
