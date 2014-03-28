@@ -1,6 +1,37 @@
-%h1 Event ID #{@event.id}
-%p.lead
-  (Event description)
-%p
-  Event date:
-  =@event.date
+.row
+  .col-md-4
+    %h1 Event ID #{@event.id}
+    %p.lead
+      (Event description)
+    %p
+      Event date:
+      =@event.date
+    %hr
+
+.row
+  .col-md-4
+    %p.lead RSVP for this event!
+    =simple_form_for @new_attendee, { class: 'form-horizontal' } do |form|
+      =form.input :name
+      =form.input :email
+      =form.input :industry
+      =form.input :event_id, as: :hidden
+      =form.button :submit
+    %hr
+
+-if @attendees.count > 0
+  .row
+    .col-md-5
+      %table.table.table-bordered
+        %caption Event Attendees
+        %thead
+          %tr
+            %th Name
+            %th Email
+            %th Industry
+        %tbody
+          -@attendees.each do |attendee|
+            %tr
+              %td= attendee.name
+              %td= attendee.email
+              %td= attendee.industry

@@ -4,7 +4,9 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = Event.includes(:attendees).find(params[:id])
+    @attendees = @event.attendees
+    @new_attendee = Attendee.new(event_id: @event.id)
   end
 
   def new
@@ -15,7 +17,7 @@ class EventsController < ApplicationController
     redirect_to Event.create!(event_params)
   end
 
-  private
+private
 
   def event_params
     params.require(:event).permit(:date)
