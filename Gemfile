@@ -1,13 +1,14 @@
+ruby '2.1.2'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.0.5'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
 
 gem 'haml-rails'
-gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git', branch: 'rm-bootstrap-3-generator'
+gem 'simple_form', '~> 3.1.0.rc1' # Need Bootstrap3 support
 gem 'high_voltage'
 
 # Use SCSS for stylesheets
